@@ -1,20 +1,17 @@
-print('Made by Erin, sources: decoders / encoders online, and google. \n\nNo other code was used from the internet or was ai generated\n(because ai is more efficient at coding than me 😎😎)\n\nMade in Virtual Studio code which helped much better since it showed what the error was instead of saying "bad input"\n')
+print('Made by Erin, sources: decoders / encoders online, and google. \n\nNo other code was used from the internet or was ai generated\n(because ai is more efficient at coding than me 😎😎)')
 from dataclasses import asdict
 from os import error
 from time import sleep,time
 
-print('HEXADECIMAL AND BINARY IS BEING ADDED LATER!!')
-
 choice = ''
 while choice.lower() != 'exit':
     choice = input('Choose what to decode (morse)\nType "Help" for help\nNot case sensitive. DO NOT MISSPELL ANYTHING.\n\nEncoding type, if you dont know, type "Help" for help, Type "Exit" to well, exit.:')
-
     if choice.lower == 'help':
         print('Command List:\nExample to show the example of the code working\nHelp to show help (youre here arent you)\nMorse to decode morse code AND ONLY DECODE\n(i havent added encoding to this)')
 
-
-    if choice == 'morse':
-        encoded = input('Paste the encoded text. \nDecoding may take some time because of me being bad at coding.\nEncoded Text: ')
+    if choice.lower() == 'morse':
+        encoded = input('\nPaste the encoded text. \nDecoding may take some time because of me being bad at coding.\nEncoded Text: ')
+        liveprint = input('Do you want to see decoding live? (yes or no)\n')
         decoded = encoded
         # here we go...
         
@@ -31,11 +28,24 @@ while choice.lower() != 'exit':
         decoded = decoded.replace('.-.-.', '+')
         decoded = decoded.replace('-...-', '=')
         decoded = decoded.replace('..--..', '?')
-        decoded = decoded.replace('-..-.', '/')
+        decoded = decoded.replace('-..-.', '[slash]')
         decoded = decoded.replace('---...', ':')
         decoded = decoded.replace('.----.', "'")
 
 
+        #numbers :D
+        
+        decoded = decoded.replace('.----', "1")
+        decoded = decoded.replace('..---', "2")
+        decoded = decoded.replace('...--', "3")
+        decoded = decoded.replace('....-', "4")
+        decoded = decoded.replace('.....', "5")
+        decoded = decoded.replace('-....', "6")
+        decoded = decoded.replace('--...', "7")
+        decoded = decoded.replace('---..', "8")
+        decoded = decoded.replace('----.', "9")
+        decoded = decoded.replace('----', "0")
+        
         #LETTERS AFTER PUNCTUATION / CHARAHCTERS. IT COULD BREAK MESSAGE MAYBE I DON'T KNOW.
         
         decoded = decoded.replace('-...', 'b')
@@ -62,26 +72,8 @@ while choice.lower() != 'exit':
         decoded = decoded.replace('--', 'm')
         decoded = decoded.replace('..', 'i')
         decoded = decoded.replace('.-', 'a')
-        pass1 = decoded
-        
         decoded = decoded.replace('-', 't')
         decoded = decoded.replace('.', 'e')
-        
-        #chars that break code
-
-        #numbers :D
-        
-        decoded = decoded.replace('.----', "1")
-        decoded = decoded.replace('..---', "2")
-        decoded = decoded.replace('...--', "3")
-        decoded = decoded.replace('....-', "4")
-        decoded = decoded.replace('.....', "5")
-        decoded = decoded.replace('-....', "6")
-        decoded = decoded.replace('--...', "7")
-        decoded = decoded.replace('---..', "8")
-        decoded = decoded.replace('----.', "9")
-        decoded = decoded.replace('----', "0")
-        
         #fix the dot dash thing
         decoded = decoded.replace('[dot]', ".")
         decoded = decoded.replace('[dash]', "-")
@@ -91,14 +83,32 @@ while choice.lower() != 'exit':
         decoded = decoded.replace('/', ' ')
         decoded = decoded.replace('  ', '/')
         decoded = decoded.replace(' ', '')
-        print('\n''Decoded message:', decoded)
+        decoded = decoded.replace('/', ' ')
+        decoded = decoded.replace('[slash]', '/')
+        print('\n''Decoded message:', decoded, '\n\n\n\n\n\n\n\n')
                 
+    if choice == 'hexadecimal':
+        encoded = 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     if choice.lower() == 'example':
         encoded = '.-- --- .-- / - .... .. ... / .. ... / .- / .-.. --- -. --. / ... - .-. .. -. --. / .... . .-. . ... / .- -. / . -..- .- -- .--. .-.. . / --- ..-. / - .... . / .- .-.. .--. .... .- -... . - / .- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --.. / ... -.-- -- -... --- .-.. ... / .- .-. . -. - / .- -.. -.. . -.. / -.-- . - / .- -. -.. / ..- .... / --. --- --- -.. -... -.-- .'
         decoded = encoded
         print('The example thats going to be printed', decoded)
-        liveprint = input('Do you want to see the decoder decoding live?\n [if youre on the platform then choose NO because it will fill the output]\n(yes / no)')
+        print("Hexadecimal and Binary will be added later.")
+        liveprint = input('Do you want to see the decoder decoding live?\n(if you are on the coding platform choose NO)\n(yes / no)')
         if liveprint.lower() == 'yes' or liveprint.lower() == 'y':
             decoded = decoded.replace('-...', 'b')
             print('Progress on decoding:\n', decoded)
@@ -257,3 +267,6 @@ while choice.lower() != 'exit':
                 print('YEAH YOU FIXED IT!! NOW GO COPY THE CODE.')
             else:
                 print('you didnt fix it.')
+    if choice == 'exit':
+        print('\n\n\nBye!')
+        break
