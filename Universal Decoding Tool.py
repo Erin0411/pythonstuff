@@ -6,8 +6,8 @@ from time import sleep,time
 print('HEXADECIMAL AND BINARY IS BEING ADDED LATER!!')
 
 choice = ''
-while choice.lower() != 'morse' or choice.lower() != 'hexadecimal' or choice.lower() != 'binary':
-    choice = input('Choose what to decode (morse, hexadecimal, binary.)\nType "Help" for help\nNot case sensitive. DO NOT MISSPELL ANYTHING.\n\nEncoding type, if you dont know, type "Help" for help:')
+while choice.lower() != 'exit':
+    choice = input('Choose what to decode (morse, hexadecimal, binary.)\nType "Help" for help\nNot case sensitive. DO NOT MISSPELL ANYTHING.\n\nEncoding type, if you dont know, type "Help" for help, Type "Exit" to well, exit.:')
 
     if choice.lower == 'help':
         print('Command List:\nExample to show the example of the code working\nHelp to show help (youre here arent you)\nMorse to decode morse code AND ONLY DECODE\n(i havent added encoding to this)')
