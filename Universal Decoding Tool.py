@@ -2,7 +2,12 @@ print('Made by Erin, sources: decoders / encoders online, and google. \n\nNo oth
 from dataclasses import asdict
 from os import error
 from time import sleep,time
-choice = input('Choose what to decode (morse, hexadecimal, binary.)\nType "Help" for help\nNot case sensitive. DO NOT MISSPELL ANYTHING.\n Encoding type, if you dont know, type "Help" for help:')
+
+print('HEXADECIMAL AND BINARY IS BEING ADDED LATER!!')
+
+choice = ''
+while choice.lower() != 'morse' or choice.lower() != 'hexadecimal' or choice.lower() != 'binary':
+    choice = input('Choose what to decode (morse, hexadecimal, binary.)\nType "Help" for help\nNot case sensitive. DO NOT MISSPELL ANYTHING.\n\nEncoding type, if you dont know, type "Help" for help:')
 
 if choice.lower == 'help':
     print('Command List:\nExample to show the example of the code working\nHelp to show help (youre here arent you)\nMorse to decode morse code AND ONLY DECODE\n(i havent added encoding to this)')
