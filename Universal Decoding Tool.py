@@ -1,4 +1,4 @@
-print('Made by Erin, sources: decoders / encoders online, and google. \n\nNo other code was used from the internet or was ai generated\n(because ai is more efficient at coding than me 😎😎)')
+print('Made by Erin, sources: decoders / encoders online, and google. \n\nNo other code was used from the internet or was ai generated\n(because ai is more efficient at coding than me 😎😎)\nthis isnt meant to be used as a proper decoder i reccomend using online ones since they may be more accurate\nand theres like also much better decoders you can find on github so thats epic 🧍‍♂️')
 from dataclasses import asdict
 from os import error
 from time import sleep,time
@@ -86,6 +86,18 @@ while choice.lower() != 'exit':
         decoded = decoded.replace('/', ' ')
         decoded = decoded.replace('[slash]', '/')
         print('\n''Decoded message:', decoded, '\n\n\n\n\n\n\n\n')
+
+
+    #FINALLY HEXADECIMAL.....
+    #LOWERCASE A-Z THIS IS CASE SENSITIVE!!
+    # 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6f 6e 70 71 72 73 74 75 76 77 78 79 7a (26 letters)
+    #UPPER CASE A-Z THIS IS CASE SENSITIVE!!
+    # 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56
+    
+    
+    if choice == 'hexadecimal':
+        print('Work in progress.')
+        #lucklily these cant glitch since its all speperated by spaces so erm yeah
 
     if choice.lower() == 'example':
         encoded = '.-- --- .-- / - .... .. ... / .. ... / .- / .-.. --- -. --. / ... - .-. .. -. --. / .... . .-. . ... / .- -. / . -..- .- -- .--. .-.. . / --- ..-. / - .... . / .- .-.. .--. .... .- -... . - / .- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --.. / ... -.-- -- -... --- .-.. ... / .- .-. . -. - / .- -.. -.. . -.. / -.-- . - / .- -. -.. / ..- .... / --. --- --- -.. -... -.-- .'
@@ -180,6 +192,7 @@ while choice.lower() != 'exit':
             decoded = decoded.replace(' ', '')
             decoded = decoded.replace('/', ' ')
         print('\n''Decoded message:', decoded)
+
 
     if choice == 'debug':
         encodedtype= input('What type of encoding do you want to debug?\n')
