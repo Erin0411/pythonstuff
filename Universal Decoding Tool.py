@@ -90,14 +90,32 @@ while choice.lower() != 'exit':
 
     #FINALLY HEXADECIMAL.....
     #LOWERCASE A-Z THIS IS CASE SENSITIVE!!
-    # 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6f 6e 70 71 72 73 74 75 76 77 78 79 7a (26 letters)
+    # 61-a 62-b 63-c 64-d 65-e 66-e 67-f 68-g 69-h 6a-i 6b-j 6c-k 6d-l 6f-m 6e-n 70 71 72 73 74 75 76 77 78 79 7a (26 letters)
     #UPPER CASE A-Z THIS IS CASE SENSITIVE!!
     # 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56
     
     
     if choice == 'hexadecimal':
-        print('Work in progress.')
+        print('Work in progress.\n(in other words this does not work at all until this thingy is removed 😨)\n')
         #lucklily these cant glitch since its all speperated by spaces so erm yeah
+        encoded = input('\nPaste the encoded text. \nDecoding may take some time because of me being bad at coding.\nEncoded Text: ')
+        liveprint = input('Do you want to see decoding live? (This doesnt work, it wont decode live even if you type yes)\n')
+        decoded = encoded
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
+        decoded = decoded.replace('', '')
 
     if choice.lower() == 'example':
         encoded = '.-- --- .-- / - .... .. ... / .. ... / .- / .-.. --- -. --. / ... - .-. .. -. --. / .... . .-. . ... / .- -. / . -..- .- -- .--. .-.. . / --- ..-. / - .... . / .- .-.. .--. .... .- -... . - / .- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --.. / ... -.-- -- -... --- .-.. ... / .- .-. . -. - / .- -.. -.. . -.. / -.-- . - / .- -. -.. / ..- .... / --. --- --- -.. -... -.-- .'
