@@ -1,15 +1,11 @@
-print('Made by Erin, sources: decoders / encoders online, and google. \n\nNo other code was used from the internet or was ai generated\n(because ai is more efficient at coding than me B) )\n\nthis isnt meant to be used as a proper decoder i reccomend using online ones since they may be more accurate\nand theres like also much better decoders you can find on github so thats epic :D\n\n')
-
-
 #EXAMPLE!! USE THIS FOR THE PRESENTATION!!
 # 68 74 74 70 73 3a 2f 2f 67 69 74 68 75 62 2e 63 6f 6d 2f 45 72 69 6e 30 34 31 31 2f
 
-
 choice = ''
 while choice.lower() != 'exit':
-    choice = input('Choose what to decode\nType "Help" for help\n\nEncoding type, if you dont know, type "Help" for help, Type "Exit" to well, exit.: ')
+    choice = input('\nChoose what to decode\n\nEncoding type, if you dont know, type "Help" for help, Type "Exit" exit.: ')
     if choice.lower == 'help':
-        print('Command List:\nExample to show the example of the code working\nHelp to show help (youre here arent you)\nMorse to decode morse code AND ONLY DECODE\n(i havent added encoding to this)')
+        print('Command List:\nExample to show the example of the code working\nHelp to show help (youre here arent you)\n\n')
 
     if choice.lower() == 'morse':
         encoded = input('\nPaste the encoded text. \nDecoding may take some time because of me being bad at coding.\nEncoded Text: ')
@@ -88,7 +84,7 @@ while choice.lower() != 'exit':
         print('Work in progress.\n(in other words this does not work at all until this thingy is removed 😨)\n')
         #lucklily these cant glitch since its all speperated by spaces and unique so erm yeah
         encoded = input('\nPaste the encoded text. \nDecoding may take some time because of me being bad at coding.\nEncoded Text: ')
-        decoded = encoded.upper
+        decoded = encoded.upper()
         #im not adding ".upper()" to every single line here sorry not sorry
 
         #letters
@@ -202,40 +198,195 @@ while choice.lower() != 'exit':
 
     #example!
     if choice.lower() == 'example':
-        encoded = '.-- --- .-- / - .... .. ... / .. ... / .- / .-.. --- -. --. / ... - .-. .. -. --. / .... . .-. . ... / .- -. / . -..- .- -- .--. .-.. . / --- ..-. / - .... . / .- .-.. .--. .... .- -... . - / .- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --.. / ... -.-- -- -... --- .-.. ... / .- .-. . -. - / .- -.. -.. . -.. / -.-- . - / .- -. -.. / ..- .... / --. --- --- -.. -... -.-- .'
-        decoded = encoded
-        print('The example thats going to be printed', decoded)
-        print("Hexadecimal and Binary will be added later.")
-        
-        decoded = decoded.replace('-...', 'b')
-        decoded = decoded.replace('-.-.', 'c')
-        decoded = decoded.replace('..-.', 'f')
-        decoded = decoded.replace('....', 'h')
-        decoded = decoded.replace('.---', 'j')
-        decoded = decoded.replace('---', 'o')
-        decoded = decoded.replace('.-..', 'l')
-        decoded = decoded.replace('.-.', 'r')
-        decoded = decoded.replace('.--.', 'p')
-        decoded = decoded.replace('--.-', 'q')
-        decoded = decoded.replace('...-', 'v')
-        decoded = decoded.replace('...', 's')
-        decoded = decoded.replace('-..-', 'x')
-        decoded = decoded.replace('-.--', 'y')
-        decoded = decoded.replace('-.-', 'k')
-        decoded = decoded.replace('.--', 'w')
-        decoded = decoded.replace('--..', 'z')
-        decoded = decoded.replace('-..', 'd')
-        decoded = decoded.replace('--.', 'g')
-        decoded = decoded.replace('-.', 'n')
-        decoded = decoded.replace('..-', 'u')
-        decoded = decoded.replace('--', 'm')
-        decoded = decoded.replace('..', 'i')
-        decoded = decoded.replace('.-', 'a')
-        decoded = decoded.replace('-', 't')
-        decoded = decoded.replace('.', 'e')
-        decoded = decoded.replace(' ', '')
-        decoded = decoded.replace('/', ' ')
-        print('\n''Decoded message:', decoded)
+        examplechoice = input('Hex or Morse Code?')
+        if examplechoice.lower() == 'morse':
+
+            encoded = '.-- --- .-- / - .... .. ... / .. ... / .- / .-.. --- -. --. / ... - .-. .. -. --. / .... . .-. . ... / .- -. / . -..- .- -- .--. .-.. . / --- ..-. / - .... . / .- .-.. .--. .... .- -... . - / .- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --.. / ... -.-- -- -... --- .-.. ... / .- .-. . -. - / .- -.. -.. . -.. / -.-- . - / .- -. -.. / ..- .... / --. --- --- -.. -... -.-- .'
+            decoded = encoded
+            print('The example thats going to be printed\n', encoded)
+            decoded = decoded.replace('.-.-.-', '[dot]')
+            decoded = decoded.replace('-....-', '[dash]')
+            decoded = decoded.replace('--..--', ',')
+            decoded = decoded.replace('-.-.--', '!')
+            decoded = decoded.replace('.--.-.', '@')
+            decoded = decoded.replace('.-...', '&')
+            decoded = decoded.replace('-.--.-', ')')
+            decoded = decoded.replace('-.--.', '(')
+            decoded = decoded.replace('.-.-.', '+')
+            decoded = decoded.replace('-...-', '=')
+            decoded = decoded.replace('..--..', '?')
+            decoded = decoded.replace('-..-.', '[slash]')
+            decoded = decoded.replace('---...', ':')
+            decoded = decoded.replace('.----.', "'")
+
+
+            #numbers :D
+            decoded = decoded.replace('.----', "1")
+            decoded = decoded.replace('..---', "2")
+            decoded = decoded.replace('...--', "3")
+            decoded = decoded.replace('....-', "4")
+            decoded = decoded.replace('.....', "5")
+            decoded = decoded.replace('-....', "6")
+            decoded = decoded.replace('--...', "7")
+            decoded = decoded.replace('---..', "8")
+            decoded = decoded.replace('----.', "9")
+            decoded = decoded.replace('----', "0")
+            
+            #letters
+            decoded = decoded.replace('-...', 'b')
+            decoded = decoded.replace('-.-.', 'c')
+            decoded = decoded.replace('..-.', 'f')
+            decoded = decoded.replace('....', 'h')
+            decoded = decoded.replace('.---', 'j')
+            decoded = decoded.replace('---', 'o')
+            decoded = decoded.replace('.-..', 'l')
+            decoded = decoded.replace('.-.', 'r')
+            decoded = decoded.replace('.--.', 'p')
+            decoded = decoded.replace('--.-', 'q')
+            decoded = decoded.replace('...-', 'v')
+            decoded = decoded.replace('...', 's')
+            decoded = decoded.replace('-..-', 'x')
+            decoded = decoded.replace('-.--', 'y')
+            decoded = decoded.replace('-.-', 'k')
+            decoded = decoded.replace('.--', 'w')
+            decoded = decoded.replace('--..', 'z')
+            decoded = decoded.replace('-..', 'd')
+            decoded = decoded.replace('--.', 'g')
+            decoded = decoded.replace('-.', 'n')
+            decoded = decoded.replace('..-', 'u')
+            decoded = decoded.replace('--', 'm')
+            decoded = decoded.replace('..', 'i')
+            decoded = decoded.replace('.-', 'a')
+            decoded = decoded.replace('-', 't')
+            decoded = decoded.replace('.', 'e')
+            #fix the dot dash thing
+            decoded = decoded.replace('[dot]', ".")
+            decoded = decoded.replace('[dash]', "-")
+
+            #percentages
+            decoded = decoded.replace('0/0', '%')
+            #remove and fix spaces
+
+            decoded = decoded.replace(' ', '')
+            decoded = decoded.replace('[slash]', '/')
+            decoded = decoded.replace('/', ' ')
+            print('\n''Decoded message:', decoded)
+
+        #HEX EXAMPLE!!
+        if examplechoice == 'hex':
+            encoded = '68 74 74 70 73 3a 2f 2f 67 69 74 68 75 62 2e 63 6f 6d 2f 45 72 69 6e 30 34 31 31 2f'
+            decoded = encoded.upper()
+            #im not adding ".upper()" to every single line here sorry not sorry
+
+            #letters
+            # (letters lowercase)
+            decoded = decoded.replace('61', 'a')
+            decoded = decoded.replace('62', 'b')
+            decoded = decoded.replace('63', 'c')
+            decoded = decoded.replace('64', 'd')
+            decoded = decoded.replace('65', 'e')
+            decoded = decoded.replace('66', 'f')
+            decoded = decoded.replace('67', 'g')
+            decoded = decoded.replace('68', 'h')
+            decoded = decoded.replace('69', 'i')
+            decoded = decoded.replace('6A', 'j')
+            decoded = decoded.replace('6B', 'k')
+            decoded = decoded.replace('6C', 'l')
+            decoded = decoded.replace('6D', 'm')
+            decoded = decoded.replace('6E', 'n')
+            decoded = decoded.replace('6F', 'o')
+            decoded = decoded.replace('70', 'p')
+            decoded = decoded.replace('71', 'q')
+            decoded = decoded.replace('72', 'r')
+            decoded = decoded.replace('73', 's')
+            decoded = decoded.replace('74', 't')
+            decoded = decoded.replace('75', 'u')
+            decoded = decoded.replace('76', 'v')
+            decoded = decoded.replace('77', 'w')
+            decoded = decoded.replace('78', 'x')
+            decoded = decoded.replace('79', 'y')
+            decoded = decoded.replace('7A', 'z')
+
+            #LETTERS
+            # (letters uppercase)
+            decoded = decoded.replace('41', 'A')
+            decoded = decoded.replace('42', 'B')
+            decoded = decoded.replace('43', 'C')
+            decoded = decoded.replace('44', 'D')
+            decoded = decoded.replace('45', 'E')
+            decoded = decoded.replace('46', 'F')
+            decoded = decoded.replace('47', 'G')
+            decoded = decoded.replace('48', 'H')
+            decoded = decoded.replace('49', 'I')
+            decoded = decoded.replace('4A', 'J')
+            decoded = decoded.replace('4B', 'K')
+            decoded = decoded.replace('4C', 'L')
+            decoded = decoded.replace('4D', 'M')
+            decoded = decoded.replace('4E', 'N')
+            decoded = decoded.replace('4F', 'O')
+            decoded = decoded.replace('50', 'P')
+            decoded = decoded.replace('51', 'Q')
+            decoded = decoded.replace('52', 'R')
+            decoded = decoded.replace('53', 'S')
+            decoded = decoded.replace('54', 'T')
+            decoded = decoded.replace('55', 'U')
+            decoded = decoded.replace('56', 'V')
+            decoded = decoded.replace('57', 'W')
+            decoded = decoded.replace('58', 'X')
+            decoded = decoded.replace('59', 'Y')
+            decoded = decoded.replace('5A', 'Z')
+
+            #symbols
+            decoded = decoded.replace('21', '!')
+            decoded = decoded.replace('40', '@')
+            decoded = decoded.replace('23', '#')
+            decoded = decoded.replace('24', '$')
+            decoded = decoded.replace('25', '%')
+            decoded = decoded.replace('5E', '^')
+            decoded = decoded.replace('26', '%')
+            decoded = decoded.replace('2A', '*')
+            decoded = decoded.replace('28', '(')
+            decoded = decoded.replace('29', ')')
+            decoded = decoded.replace('2D', '-')
+            decoded = decoded.replace('5F', '_')
+            decoded = decoded.replace('3D', '=')
+            decoded = decoded.replace('2B', '+')
+            decoded = decoded.replace('5B', '[')
+            decoded = decoded.replace('5D', ']')
+            decoded = decoded.replace('7B', '{')
+            decoded = decoded.replace('7D', '}')
+            decoded = decoded.replace('3B', ';')
+            decoded = decoded.replace('3A', ':')
+            decoded = decoded.replace('27', "'")
+            decoded = decoded.replace('22', '"')
+            decoded = decoded.replace('5C', '\\')
+            decoded = decoded.replace('7C', '|')
+            decoded = decoded.replace('3C', '<')
+            decoded = decoded.replace('3E', '>')
+            decoded = decoded.replace('2C', ',')
+            decoded = decoded.replace('2E', '.')
+            decoded = decoded.replace('2F', '/')
+            decoded = decoded.replace('3F', '?')
+            
+            #nums
+            decoded = decoded.replace('30', '0')
+            decoded = decoded.replace('31', '1')
+            decoded = decoded.replace('32', '2')
+            decoded = decoded.replace('33', '3')
+            decoded = decoded.replace('34', '4')
+            decoded = decoded.replace('35', '5')
+            decoded = decoded.replace('36', '6')
+            decoded = decoded.replace('37', '7')
+            decoded = decoded.replace('38', '8')
+            decoded = decoded.replace('39', '9')
+
+            #spaces
+            decoded = decoded.replace(' ', '')
+            decoded = decoded.replace('20', ' ')
+            
+            print('Decoded!')
+            print('Decoded text:', decoded)
+            print('woah thats my github link you should totally check it out')
 
 
     #debugging!
