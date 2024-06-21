@@ -2,7 +2,7 @@ print('Made by Erin, sources: decoders / encoders online, and google. \n\nNo oth
 
 
 #EXAMPLE!! USE THIS FOR THE PRESENTATION!!
-# 68 74 74 70 73 3a 2f 2f 77 77 77 2e 79 6f 75 74 75 62 65 2e 63 6f 6d 2f 77 61 74 63 68 3f 76 3d 64 51 77 34 77 39 57 67 58 63 51
+# 68 74 74 70 73 3a 2f 2f 67 69 74 68 75 62 2e 63 6f 6d 2f 45 72 69 6e 30 34 31 31 2f
 
 
 choice = ''
